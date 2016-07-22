@@ -1,14 +1,16 @@
-package com.wz.test.initializer;
+package com.wz.test.configuration;
 
 
-import com.wz.test.configuration.MyWebConfig;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
 
 /**
  * Created by zhen.wang3 on 2016/7/21.
  */
-public class WebAppInitializer extends AbstractAnnotationConfigDispatcherServletInitializer {
+
+@Configuration
+public class WebAppConfig extends AbstractAnnotationConfigDispatcherServletInitializer {
 
 
     @Override
@@ -18,7 +20,7 @@ public class WebAppInitializer extends AbstractAnnotationConfigDispatcherServlet
 
     @Override
     protected Class<?>[] getServletConfigClasses() {
-        return new Class[] { MyWebConfig.class };
+        return new Class[] { SpringWebConfig.class };
     }
 
     @Override
